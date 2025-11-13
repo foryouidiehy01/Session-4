@@ -1,0 +1,18 @@
+create database HS;
+use HS;
+
+create table Students (
+StudentID int primary key not null auto_increment,
+Name varchar ( 100 ),
+Age int not null ,
+check ( Age  > 18 ),
+Major varchar ( 100 ) not null
+);
+
+insert into Students ( StudentID , Name , Age , Major )
+values 
+(1,'Alice','20','Computer Science'),
+(2,'Bob','22','Mathematics'),
+(3,'Charlie','21','Physics'); 
+
+select * from Students;
